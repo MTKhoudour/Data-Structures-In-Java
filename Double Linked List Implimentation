@@ -121,14 +121,16 @@ public class DLL {
 		Node current = findNode(xData) ;
 		Node prevCurr = current.prev ,nextCurr = current.next ; 
 		
+		// Delete Head 
 		if(head.data == xData) head = temp.next ;
-		
+		//Deletes Last Node (Tail) 
 		if(current.next == null){
 			System.out.println("last node is  " + current.data + " , POOF !! It's Gone !");
 			current.prev.next = current.next ;
 			current.next = null ; 
 		}
-	
+		
+		// Delete node but not head and tail 
 		if(prevCurr != null && nextCurr != null) {
 			System.out.println("Node to be deleted :  " + current.data + " And POOF !! " );
 		
